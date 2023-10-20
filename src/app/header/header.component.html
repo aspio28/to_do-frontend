@@ -3,7 +3,7 @@
     Home
     <mat-icon>home</mat-icon>
   </button>
-  <button mat-button routerLink="insert" color="primary">
+  <button mat-button routerLink="insert" color="primary" *ngIf="currentUrl !== '/insert'">
     New Task
     <mat-icon matIconSuffix>create</mat-icon>
   </button>

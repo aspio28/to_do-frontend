@@ -7,6 +7,8 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import {HeaderModule} from "./header/header.module";
 import {SendModule} from "./insert/send/send.module";
+import {BodyModule} from "./body/body.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import {SendModule} from "./insert/send/send.module";
         BrowserModule,
         AppRoutingModule,
         GraphQLModule,
+        RouterModule,
         HttpClientModule,
         HeaderModule,
-        SendModule
+        SendModule,
+        BodyModule
     ],
   providers: [],
   bootstrap: [AppComponent]
