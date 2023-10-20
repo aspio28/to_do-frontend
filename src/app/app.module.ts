@@ -9,6 +9,7 @@ import {HeaderModule} from "./header/header.module";
 import {SendModule} from "./insert/send/send.module";
 import {BodyModule} from "./body/body.module";
 import {RouterModule} from "@angular/router";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {RouterModule} from "@angular/router";
         AppRoutingModule,
         GraphQLModule,
         RouterModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         HeaderModule,
         SendModule,
