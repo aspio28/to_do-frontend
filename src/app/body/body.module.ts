@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BodyComponent } from './body.component';
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
+import {DeleteModule} from "../delete/delete.module";
 
 
 
@@ -13,10 +14,11 @@ import {MatIconModule} from "@angular/material/icon";
     exports: [
         BodyComponent
     ],
-  imports: [
-    CommonModule,
-    MatListModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        MatListModule,
+        MatIconModule,
+        DeleteModule
+    ]
 })
 export class BodyModule { }
