@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Apollo, gql} from "apollo-angular";
-import { Observable, Subscription} from "rxjs";
+import { Observable } from "rxjs";
 import { map } from "rxjs/operators"
 import {NavigationEnd, Router} from "@angular/router";
 
@@ -29,7 +29,10 @@ export class BodyComponent implements OnInit {
   }
   ngOnInit() {
     this.tasks = this.apollo
-      .watchQuery<any>({query: QUERY })
+      .watchQuery<any>({
+        query: QUERY,
+        pollInterval: 500,
+      })
       .valueChanges.pipe(map(result => result.data.tasks));
   }
 }

@@ -12,12 +12,7 @@ export class InsertComponent {
   @Input() submitLabel: string;
   task = new FormControl('',[Validators.required]);
   description = new FormControl('');
-  getTaskErrorMessage() {
-    if(this.task.hasError('required')) {
-      return 'You must enter a task';
-    }
-    return '';
-  }
+
   onSubmit() {
     this.onSubmitEvent.emit({
       task: this.task.value,

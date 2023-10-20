@@ -4,11 +4,10 @@
     <mat-label>Task</mat-label>
     <input type="text" matInput [formControl]="task" required>
     <mat-icon matIconSuffix>create</mat-icon>
-    <mat-error *ngIf="task.hasError('required')">{{ getTaskErrorMessage() }}</mat-error>
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Description</mat-label>
-    <input type="text" matInput [formControl]="description">
+    <input type="text" matInput [formControl]="description" required>
     <mat-icon matIconSuffix>text_format</mat-icon>
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="onSubmit()">
