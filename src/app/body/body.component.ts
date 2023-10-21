@@ -7,6 +7,7 @@ import {NavigationEnd, Router} from "@angular/router";
 const QUERY = gql `
 {
   tasks {
+    id
     title
     description
     completed

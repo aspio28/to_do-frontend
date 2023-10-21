@@ -1,0 +1,4 @@
+<button mat-icon-button color="primary" (click)="updateTask()">
+  <mat-icon *ngIf="updateCompleted">turned_in</mat-icon>
+  <mat-icon *ngIf="!updateCompleted">turned_in_not</mat-icon>
+</button>

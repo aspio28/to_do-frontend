@@ -23,7 +23,6 @@ const CREATE_MUTATION = gql `
 export class SendComponent {
   constructor(private apollo: Apollo) {
   }
-
   send({task, description}: any) {
     this.apollo.mutate({
       mutation: CREATE_MUTATION,

@@ -1,12 +1,18 @@
-<div *ngIf="currentUrl !== '/insert'">
+<div *ngIf="currentUrl !== '/insert'" class="tasksList">
   <ul>
     <li *ngFor="let task of tasks | async">
-      <mat-list>
+      <mat-list class="task-item">
         <mat-list-item>
-          <span matListItemTitle>{{ task.title }}</span>
-          <span matListItemLine>{{ task.description }}</span>
-          <span matListItemLine>{{ task.completed }}</span>
-          <app-delete></app-delete>
+          <div class="task-content">
+            <div class="task-text">
+              <span class="task-title">{{ task.title }}</span>
+              <span class="task-description">{{ task.description }}</span>
+            </div>
+            <div class="task-icons">
+              <app-update [updateCompleted]="task.completed" [updateId]="task.id"></app-update>
+              <app-delete [deleteId]="task.id"></app-delete>
+            </div>
+          </div>
         </mat-list-item>
       </mat-list>
     </li>

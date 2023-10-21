@@ -1,0 +1,36 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+}
+
+.task-text {
+  flex: 1;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.task-description {
+  flex: 2;
+}
+
+.task-icons {
+  display: flex;
+  align-items: center;
+}
+
+.task-icons button {
+  margin-left: 10px;
+}
