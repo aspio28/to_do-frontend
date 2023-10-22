@@ -10,6 +10,7 @@ import {SendModule} from "./insert/send/send.module";
 import {BodyModule} from "./body/body.module";
 import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {DataUpdateService} from "./data-update.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         SendModule,
         BodyModule
     ],
-  providers: [],
+  providers: [DataUpdateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

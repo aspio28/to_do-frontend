@@ -1,4 +1,4 @@
-<div *ngIf="currentUrl !== '/insert'" class="tasksList">
+<div *ngIf="(currentUrl != '/insert' && currentUrl != '/update')" class="tasksList">
   <ul>
     <li *ngFor="let task of tasks | async">
       <mat-list class="task-item">
@@ -9,7 +9,8 @@
               <span class="task-description">{{ task.description }}</span>
             </div>
             <div class="task-icons">
-              <app-update [updateCompleted]="task.completed" [updateId]="task.id"></app-update>
+              <app-load-update [taskTitle]="task.title" [taskId]="task.id" [taskDescription]="task.description"></app-load-update>
+              <app-check-task [checkCompleted]="task.completed" [checkId]="task.id"></app-check-task>
               <app-delete [deleteId]="task.id"></app-delete>
             </div>
           </div>

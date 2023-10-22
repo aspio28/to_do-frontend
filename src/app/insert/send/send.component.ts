@@ -31,9 +31,6 @@ export class SendComponent {
         description: description,
 
       }
-    }).subscribe(
-      ({data}) => {
-        console.log('got data', data);
-      });
+    }).subscribe();
   }
 }

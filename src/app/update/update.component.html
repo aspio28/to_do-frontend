@@ -1,4 +1,17 @@
-<button mat-icon-button color="primary" (click)="updateTask()">
-  <mat-icon *ngIf="updateCompleted">turned_in</mat-icon>
-  <mat-icon *ngIf="!updateCompleted">turned_in_not</mat-icon>
-</button>
+<div class="container">
+  <h1>Update Task</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ oldTitle() }}</mat-label>
+    <input type="text" matInput [formControl]="title">
+    <mat-icon matIconSuffix>create</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ oldDescription() }}</mat-label>
+    <input type="text" matInput [formControl]="description">
+    <mat-icon matIconSuffix>text_format</mat-icon>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="updateTask()" routerLink="/">
+    {{ submitLabel }}
+    Send
+  </button>
+</div>

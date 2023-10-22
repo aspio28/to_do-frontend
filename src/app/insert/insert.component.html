@@ -10,7 +10,7 @@
     <input type="text" matInput [formControl]="description" required>
     <mat-icon matIconSuffix>text_format</mat-icon>
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="onSubmit()">
+  <button mat-raised-button color="primary" (click)="onSubmit()" routerLink="/">
     {{ submitLabel }}
   </button>
 </div>

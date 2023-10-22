@@ -1,0 +1,4 @@
+<button mat-icon-button color="primary" (click)="checkTask()">
+  <mat-icon *ngIf="checkCompleted">turned_in</mat-icon>
+  <mat-icon *ngIf="!checkCompleted">turned_in_not</mat-icon>
+</button>

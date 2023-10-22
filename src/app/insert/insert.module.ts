@@ -6,6 +6,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatIconModule } from "@angular/material/icon";
+import {RouterLink} from "@angular/router";
 
 
 
@@ -13,14 +14,15 @@ import { MatIconModule } from "@angular/material/icon";
   declarations: [
     InsertComponent
   ],
-  imports: [
-    CommonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatButtonModule,
-  ],
+    imports: [
+        CommonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatButtonModule,
+        RouterLink,
+    ],
   exports: [
     InsertComponent,
   ]
